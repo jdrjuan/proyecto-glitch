@@ -1,0 +1,18 @@
+<div class="container mt-4">
+    <h1 class="mb-4">Productos</h1>
+
+    <div class="row g-4">
+        {{#if products}}
+            {{#each products}}
+                {{> productCard this}}
+            {{/each}}
+        {{else}}
+            <div class="col">
+                <p class="text-center">No hay productos disponibles en este momento</p>
+                {{#if error}}
+                    <p class="text-danger text-center">{{error}}</p>
+                {{/if}}
+            </div>
+        {{/if}}
+    </div>
+</div>
